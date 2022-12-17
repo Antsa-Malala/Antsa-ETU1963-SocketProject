@@ -11,7 +11,7 @@ public class GServeur {
     public static JList<String> utilisateur;
     JButton init;
     JButton sortir;
-    JTextField nom_utilisateur;
+    JTextField nom_serveur;
     JTextField port_serveur;
 
     public void init() {
@@ -19,13 +19,13 @@ public class GServeur {
         window.setLayout(null);
         window.setBounds(200, 200, 510, 340);
 
-        JLabel labelnom_utilisateur = new JLabel("Serveur:");
-        labelnom_utilisateur.setBounds(10, 8, 80, 30);
-        window.add(labelnom_utilisateur);
+        JLabel labelnom_serveur = new JLabel("Serveur:");
+        labelnom_serveur.setBounds(10, 8, 80, 30);
+        window.add(labelnom_serveur);
 
-        nom_utilisateur = new JTextField();
-        nom_utilisateur.setBounds(80, 8, 60, 30);
-        window.add(nom_utilisateur);
+        nom_serveur = new JTextField();
+        nom_serveur.setBounds(80, 8, 60, 30);
+        window.add(nom_serveur);
 
         JLabel label_port = new JLabel("Port:");
         label_port.setBounds(150, 8, 60, 30);
@@ -81,17 +81,17 @@ public class GServeur {
 
     public int getport() {
         String port = port_serveur.getText();
-        String name = nom_utilisateur.getText();
+        String name = nom_serveur.getText();
         if ("".equals(port) || "".equals(name)) {
-            JOptionPane.showMessageDialog(window, "Port ou nom d'utilisateur non specifie!");
+            JOptionPane.showMessageDialog(window, "Port ou nom dU serveur non specifie!");
             return 0;
         } else {
             return Integer.parseInt(port);
         }
     }
 
-    public String getnom_utilisateur() {
-        return nom_utilisateur.getText();
+    public String getnom_serveur() {
+        return nom_serveur.getText();
     }
 
     public GServeur() {
