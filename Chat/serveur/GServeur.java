@@ -1,8 +1,6 @@
 package serveur;
 
 import javax.swing.*;
-import java.awt.event.*;
-import java.io.IOException;
 
 public class GServeur {
     public static JFrame window;
