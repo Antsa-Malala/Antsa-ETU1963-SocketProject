@@ -144,7 +144,6 @@ public class GClient {
         } else {
             try {
                 new EnvoyeC(socket, getnom_utilisateur() + ": " + messages, "4", getmsgprive());
-                GClient.textMessage.append(getnom_utilisateur() + ": " + messages + "\r\n");
                 message.setText(null);
             } catch (IOException e1) {
                 JOptionPane.showMessageDialog(window, "Message prive non envoye ");

@@ -14,5 +14,4 @@ public class Adapteur extends WindowAdapter {
         }
         System.exit(0);
     }
-
 }

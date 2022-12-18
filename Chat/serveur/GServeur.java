@@ -65,11 +65,11 @@ public class GServeur {
         paneutilisateur.setBounds(355, 70, 130, 220);
         window.add(paneutilisateur);
 
-        discussion();
+        mpihaino();
         window.setVisible(true);
     }
 
-    public void discussion() {
+    public void mpihaino() {
         window.addWindowListener(new Adapteur());
 
         sortir.addActionListener(new MpihainoA(this, "sortir"));
@@ -81,7 +81,7 @@ public class GServeur {
         String port = port_serveur.getText();
         String name = nom_serveur.getText();
         if ("".equals(port) || "".equals(name)) {
-            JOptionPane.showMessageDialog(window, "Port ou nom dU serveur non specifie!");
+            JOptionPane.showMessageDialog(window, "Port ou nom du serveur non specifie!");
             return 0;
         } else {
             return Integer.parseInt(port);

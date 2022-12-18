@@ -44,15 +44,11 @@ public class ReceveurC implements Runnable {
                     GClient.utilisateur.clearSelection();
                     GClient.utilisateur.setListData(data);
                 } else if (info.equals("4")) { // 4 pour notifications
-                    GClient.connect.setText("entrer");
-                    GClient.sortir.setText("sortir");
                     GClient.socket.close();
                     GClient.socket = null;
                     JOptionPane.showMessageDialog(GClient.window, "Quelqu'un utilise deja ce nom d'utilisateur");
                     break;
                 } else if (info.equals("5")) { // 5 pour fermer le serveur
-                    GClient.connect.setText("entrer");
-                    GClient.sortir.setText("sortir");
                     GClient.socket.close();
                     GClient.socket = null;
                     break;

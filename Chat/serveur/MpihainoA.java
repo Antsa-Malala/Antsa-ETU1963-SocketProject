@@ -36,22 +36,20 @@ public class MpihainoA implements ActionListener {
             if (Serveur.ss == null || Serveur.ss.isClosed()) {
                 JOptionPane.showMessageDialog(GServeur.window, "Le serveur a ete ferme !");
             } else {
-                if (Serveur.liste_utilisateur != null && Serveur.liste_utilisateur.size() != 0) {
-                    try {
-                        new Envoye(Serveur.liste_utilisateur, "", "5", "");
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
-                }
                 try {
-                    getgserveur().init.setText("Initier");
-                    getgserveur().sortir.setText("Arreter");
                     Serveur.ss.close();
                     Serveur.ss = null;
                     Serveur.liste_utilisateur = null;
                     Serveur.flag = false;
                 } catch (IOException e1) {
                     e1.printStackTrace();
+                }
+                if (Serveur.liste_utilisateur != null && Serveur.liste_utilisateur.size() != 0) {
+                    try {
+                        new Envoye(Serveur.liste_utilisateur, "", "5", "");
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
                 }
             }
         } else if (getref().equals("init")) {
